@@ -1,3 +1,3 @@
-This is a slightly modified version of LUFAs GenericHID demo to recieve data over HID and set PWM output acordingly to whats recieved.
+This is a slightly modified version of LUFAs GenericHID demo to receive data over HID and set PWM output accordingly to whats received.
 
 It takes commands like "AFF7f00", "Rfe", "gFf", "Be0" to Set all, red, green or blue LED output. 

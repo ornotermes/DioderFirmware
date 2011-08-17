@@ -275,39 +275,6 @@ void ProcessGenericHIDReport(uint8_t* DataArray)
 		LED_B_OCR = ( HexCharToN(DataArray[5])<<4 ) | ( HexCharToN(DataArray[6]) );
 	}
 	
-	/*
-	//I don't know why this is not working.
-	char *endptr, *str, base = 16;
-	switch (DataArray[0])
-	{
-	case 'R':
-	case 'r':
-		*str = &DataArray[1];
-		LED_R_OCR = (char) strtol(str, &endptr, base);
-		break;
-	case 'G':
-	case 'g':
-		*str = &DataArray[1];
-		LED_G_OCR = (char) strtol(str, &endptr, base);
-		break;
-	case 'B':
-	case 'b':
-		*str = &DataArray[1];
-		LED_B_OCR = (char) strtol(str, &endptr, base);
-		break;
-	case 'A':
-	case 'a':
-		str = DataArray[5];
-		LED_B_OCR = (char) strtol(str, &endptr, base);
-		DataArray[5] = "\0";
-		str = DataArray[3];
-		LED_G_OCR = (char) strtol(str, &endptr, base);
-		DataArray[3] = "\0";
-		str = DataArray[1];
-		LED_R_OCR = (char) strtol(str, &endptr, base);
-		break;
-	}
-	*/
 }
 
 /** Function to create the next report to send back to the host at the next reporting interval.
